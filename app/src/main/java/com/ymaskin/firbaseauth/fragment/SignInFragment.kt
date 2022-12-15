@@ -37,7 +37,8 @@ class SignInFragment : Fragment() {
                     viewModel.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(requireActivity()) { task ->
                             if (task.isSuccessful) {
-                                findNavController().navigate(R.id.dataFragment)
+                                findNavController()
+                                    .navigate(R.id.action_signInFragment_to_dataFragment)
                             } else {
                                 Toast.makeText(
                                     requireContext(),

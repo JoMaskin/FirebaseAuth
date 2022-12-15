@@ -24,15 +24,27 @@
         android:id="@+id/signUpFragment"
         android:name="com.ymaskin.firbaseauth.fragment.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_dataFragment"
+            app:destination="@id/dataFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.ymaskin.firbaseauth.fragment.SignInFragment"
         android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" />
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_dataFragment"
+            app:destination="@id/dataFragment" />
+    </fragment>
     <fragment
         android:id="@+id/dataFragment"
         android:name="com.ymaskin.firbaseauth.fragment.DataFragment"
         android:label="fragment_data"
-        tools:layout="@layout/fragment_data" />
+        tools:layout="@layout/fragment_data" >
+        <action
+            android:id="@+id/action_dataFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
 </navigation>

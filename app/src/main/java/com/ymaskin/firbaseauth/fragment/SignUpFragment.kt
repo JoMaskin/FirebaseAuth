@@ -40,7 +40,8 @@ class SignUpFragment : Fragment() {
                         .addOnCompleteListener(requireActivity()) { task ->
                             if (task.isSuccessful) {
                                 saveUserData()
-                                findNavController().navigate(R.id.dataFragment)
+                                findNavController()
+                                    .navigate(R.id.action_signUpFragment_to_dataFragment)
                             } else {
                                 Toast.makeText(
                                     requireContext(),

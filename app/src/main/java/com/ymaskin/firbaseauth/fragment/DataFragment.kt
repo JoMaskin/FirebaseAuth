@@ -47,7 +47,7 @@ class DataFragment : Fragment() {
 
         binding.btnSignOut.setOnClickListener {
             viewModel.signOutUser()
-            findNavController().navigate(R.id.authFragment)
+            findNavController().navigate(R.id.action_dataFragment_to_authFragment)
         }
     }
 

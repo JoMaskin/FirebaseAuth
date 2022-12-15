@@ -27,15 +27,15 @@ class AuthFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (viewModel.getCurrentUser() != null) {
-            findNavController().navigate(R.id.dataFragment)
+            findNavController().navigate(R.id.action_authFragment_to_dataFragment)
         }
 
         binding.btnSignIn.setOnClickListener {
-            findNavController().navigate(R.id.signInFragment)
+            findNavController().navigate(R.id.action_authFragment_to_signInFragment)
         }
 
         binding.btnSignUp.setOnClickListener {
-            findNavController().navigate(R.id.signUpFragment)
+            findNavController().navigate(R.id.action_authFragment_to_signUpFragment)
         }
     }
 }
